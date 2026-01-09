@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타 숙제 관리 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎸 기타 숙제 관리</h1>
+            <div class="date-selector">
+                <label for="date-input">날짜 선택:</label>
+                <input type="date" id="date-input" value="">
+            </div>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="completed-count">0</div>
+                <div class="stat-label">완료된 과제</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-count">7</div>
+                <div class="stat-label">전체 과제</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="progress-percent">0%</div>
+                <div class="stat-label">진행률</div>
+            </div>
+        </div>
+
+        <div class="assignments-list" id="assignments-list">
+            <!-- 과제 목록이 여기에 동적으로 생성됩니다 -->
+        </div>
+
+        <div class="history-section">
+            <h2>📅 연습 기록</h2>
+            <div class="history-controls">
+                <button id="show-all-history" class="btn-secondary">전체 기록 보기</button>
+                <button id="export-data" class="btn-secondary">데이터 내보내기</button>
+                <button id="import-data" class="btn-secondary">데이터 가져오기</button>
+                <input type="file" id="import-file" accept=".json" style="display: none;">
+            </div>
+            <div class="history-list" id="history-list">
+                <!-- 기록이 여기에 표시됩니다 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
